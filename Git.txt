@@ -1,0 +1,194 @@
+
+COMANDOS:
+cd curso-git 
+git init
+dir -a
+git status
+git add
+git commit -m
+git log
+git checkout 'id da versão salva' = VOLTA TIPO REMOVE DO COISO
+-------------------------------------------------------------------
+ISSO AQUI É NO "GIT BASH HERE" PARA ACESSAR É SÓ CLICAR COM O BOTÃO DIREITO NA PASTA "curso-git" E CLICAR NESSA OPÇÃO QUE ABRE O TERMINAL: 
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop
+$ cd curso-git
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git
+$ git init
+Initialized empty Git repository in C:/Users/Laboratorio/Desktop/curso-git/.git/
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ dir
+README.md
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ dir -a
+.  ..  .git  README.md
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git add README.md
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git commit -m "Adicionando o arquivo REDME"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Laboratorio@LAB0808.(none)')
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$  git config --global user.email "ana.carolina.cardoso.nunes@gmail.com"
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Git.txt
+
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git commit -m
+error: switch `m' requires a value
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git commit -m "Adicionando o arquivo README"
+[master (root-commit) 70ba09a] Adicionando o arquivo README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git add README.md
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git commit -m "Adicionando texto FLISOL 2019"
+[master ea56d79] Adicionando texto FLISOL 2019
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git log /*lista as alterações feitas no repositório*/
+commit ea56d79d6432fee79b943c4891a9741bc7fb2ec9 (HEAD -> master)
+Author: unknown <ana.carolina.cardoso.nunes@gmail.com>
+Date:   Sat Apr 27 14:36:59 2019 -0300
+
+    Adicionando texto FLISOL 2019
+
+commit 70ba09a8fdfe4bcc14577bac6b174f3584cf0c74
+Author: unknown <ana.carolina.cardoso.nunes@gmail.com>
+Date:   Sat Apr 27 14:35:05 2019 -0300
+
+    Adicionando o arquivo README
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git (master)
+$ git checkout 70ba09
+Note: checking out '70ba09'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 70ba09a Adicionando o arquivo README
+
+EXEMPLO PRÁTICO DE VERSÃO:
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git ((70ba09a...))
+$ git add README.md
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git ((70ba09a...))
+$ git commit -m "Adicionado texto UNIVEM 2019"
+[detached HEAD 60da40b] Adicionado texto UNIVEM 2019
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Laboratorio@LAB0808 MINGW64 ~/Desktop/curso-git ((60da40b...))
+$ git log
+commit 60da40b403f1e674b0520b1fd74aba21d012483b (HEAD)
+Author: unknown <ana.carolina.cardoso.nunes@gmail.com>
+Date:   Sat Apr 27 14:46:29 2019 -0300
+
+    Adicionado texto UNIVEM 2019
+
+commit 70ba09a8fdfe4bcc14577bac6b174f3584cf0c74
+Author: unknown <ana.carolina.cardoso.nunes@gmail.com>
+Date:   Sat Apr 27 14:35:05 2019 -0300
+
+    Adicionando o arquivo README
+
+
+
